@@ -13,7 +13,7 @@
                 kenney-fonts = callPackage ./pkgs/kenney-fonts {};
                 major-mono-display = callPackage ./pkgs/major-mono-display {};
                 typewithpride = callPackage ./pkgs/typewithpride {};
-                vercetti-regular = callPackage ./pkgs/vercetti-regular {};
+                vercetti = callPackage ./pkgs/vercetti {};
             };
         };
 }

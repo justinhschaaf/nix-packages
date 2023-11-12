@@ -1,7 +1,7 @@
 { stdenv, fetchzip }: # nixpkgs repo uses stdenvNoCC. why? idk
 
 stdenv.mkDerivation rec {
-    pname = "vercetti-regular";
+    pname = "vercetti";
     version = "1.0";
 
     src = fetchzip {
