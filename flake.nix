@@ -9,11 +9,11 @@
             pkgs = import nixpkgs { inherit system; };
         in {
             packages.${system} = rec {
-                dripicons = callPackage ./pkgs/dripicons {};
-                kenney-fonts = callPackage ./pkgs/kenney-fonts {};
-                major-mono-display = callPackage ./pkgs/major-mono-display {};
-                typewithpride = callPackage ./pkgs/typewithpride {};
-                vercetti = callPackage ./pkgs/vercetti {};
+                dripicons = pkgs.callPackage ./pkgs/dripicons {};
+                kenney-fonts = pkgs.callPackage ./pkgs/kenney-fonts {};
+                major-mono-display = pkgs.callPackage ./pkgs/major-mono-display {};
+                typewithpride = pkgs.callPackage ./pkgs/typewithpride {};
+                vercetti = pkgs.callPackage ./pkgs/vercetti {};
             };
         };
 }

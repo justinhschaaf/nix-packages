@@ -12,7 +12,7 @@ My personal collection of Nix packages. Right now there are only fonts.
 
 ## How do I use it with NixOS?
 
-Untested as of writing, but based on the instructions from the Kampka repo, try adding the following in the main body of your `configuration.nix` or to the inputs in your `flake.nix`:
+Based on the instructions from the Kampka repo, try adding the following in the main body of your `configuration.nix`:
 
 ```nix
 nixpkgs.config.packageOverrides = pkgs: {
@@ -20,6 +20,12 @@ nixpkgs.config.packageOverrides = pkgs: {
         url = "https://github.com/justinhschaaf/nix-packages";
     })) {};
 };
+```
+
+For a flake, add the following input:
+
+```nix
+jspkgs.url = "github:justinhschaaf/nix-packages";
 ```
 
 ## Why didn't you just contribute it to nixpkgs?
