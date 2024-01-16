@@ -9,6 +9,7 @@
             pkgs = import nixpkgs { inherit system; };
         in {
             packages.${system} = rec {
+                bayon = pkgs.callPackage ./pkgs/bayon {};
                 dripicons = pkgs.callPackage ./pkgs/dripicons {};
                 kenney-fonts = pkgs.callPackage ./pkgs/kenney-fonts {};
                 major-mono-display = pkgs.callPackage ./pkgs/major-mono-display {};
