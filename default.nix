@@ -1,4 +1,8 @@
-{ pkgs ? import <nixpkgs> {}, ... }:
+{ pkgs ? import (fetchGit {
+    url = "https://github.com/NixOS/nixpkgs.git";
+    ref = "nixos-unstable";
+    rev = "9b19f5e77dd906cb52dade0b7bd280339d2a1f3d";
+}) {}, ... }:
 
 with pkgs;
 

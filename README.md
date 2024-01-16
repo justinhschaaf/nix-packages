@@ -25,8 +25,28 @@ nixpkgs.config.packageOverrides = pkgs: {
 For a flake, add the following input:
 
 ```nix
-jspkgs.url = "github:justinhschaaf/nix-packages";
+justinhs-packages.url = "github:justinhschaaf/nix-packages/main";
 ```
+
+Then, add the following to your outputs:
+
+```nix
+outputs = { self, nixpkgs, ... }@inputs:
+let
+    jspkgs = import justinhs-packages { inherit system; };
+in
+{
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit jspkgs; };
+    };
+};
+```
+
+See [my config](https://github.com/justinhschaaf/nixos-config/blob/main/flake.nix) for a fully functional flake example.
+
+## How do I test building a package?
+
+Run `nix-build -A <package>`, replacing `<package>` with the package you want to build. This question mostly exists for me as I'd forget without it.
 
 ## Why didn't you just contribute it to nixpkgs?
 
