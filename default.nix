@@ -1,7 +1,6 @@
-{ pkgs ? import (fetchGit {
-    url = "https://github.com/NixOS/nixpkgs.git";
-    ref = "nixos-unstable";
-    rev = "9b19f5e77dd906cb52dade0b7bd280339d2a1f3d";
+{ pkgs ? import (fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/9b19f5e77dd906cb52dade0b7bd280339d2a1f3d.tar.gz";
+    sha256 = "0939vbhln9d33xkqw63nsk908k03fxihj85zaf70i3il9z42q8mc";
 }) {}, ... }:
 
 with pkgs;
