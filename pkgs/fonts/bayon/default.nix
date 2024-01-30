@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
     pname = "bayon";
-    version = "2021.05.21";
+    version = "2021-05-21";
 
     src = fetchgit {
         url = "https://github.com/danhhong/Bayon.git";

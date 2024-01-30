@@ -8,12 +8,12 @@ with pkgs;
 
 let
     packages = rec {
-        bayon = pkgs.callPackage ./pkgs/bayon {};
-        dripicons = pkgs.callPackage ./pkgs/dripicons {};
-        kenney-fonts = pkgs.callPackage ./pkgs/kenney-fonts {};
-        major-mono-display = pkgs.callPackage ./pkgs/major-mono-display {};
-        typewithpride = pkgs.callPackage ./pkgs/typewithpride {};
-        vercetti = pkgs.callPackage ./pkgs/vercetti {};
+        bayon = pkgs.callPackage ./pkgs/fonts/bayon {};
+        dripicons = pkgs.callPackage ./pkgs/fonts/dripicons {};
+        kenney-fonts = pkgs.callPackage ./pkgs/fonts/kenney-fonts {};
+        major-mono-display = pkgs.callPackage ./pkgs/fonts/major-mono-display {};
+        typewithpride = pkgs.callPackage ./pkgs/fonts/typewithpride {};
+        vercetti = pkgs.callPackage ./pkgs/fonts/vercetti {};
 
         inherit pkgs; # similar to `pkgs = pkgs;` This lets callers use the nixpkgs version defined in this file.
     };

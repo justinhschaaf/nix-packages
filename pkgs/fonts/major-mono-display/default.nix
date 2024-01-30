@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
     pname = "major-mono-display";
-    version = "2018.09.27";
+    version = "2018-09-27";
 
     src = fetchurl {
         url = "https://github.com/googlefonts/majormono/raw/ab4221e332ee158b314406b4ca01246290a9168b/fonts/MajorMonoDisplay-Regular.ttf";
