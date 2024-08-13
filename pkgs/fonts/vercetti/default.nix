@@ -2,11 +2,11 @@
 
 stdenv.mkDerivation rec {
     pname = "vercetti";
-    version = "1.0";
+    version = "1.001";
 
     src = fetchzip {
         url = "https://filipposfragkogiannis.com/wp-content/uploads/Vercetti-Regular.zip";
-        sha256 = "znDQTbnrRX+le29sNy+MX/Sbr3ZQhq/fDw5e3BkmGkE=";
+        sha256 = "l/8JEw5RwYB4EnL2yKWukm8t/+Kk3/BtJ5zNeEeldTk=";
         stripRoot = false;
     };
 
